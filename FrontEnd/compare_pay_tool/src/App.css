@@ -1,0 +1,201 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.submit-button {
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.MuiFormHelperText-contained {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.MuiAccordionSummary-expandIcon {
+  padding: 5px !important;
+}
+
+.react-multi-email {
+  padding: 12.6px 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  -webkit-transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.react-multi-email > div > input {
+  outline: none;
+  border: 0 none;
+  vertical-align: baseline;
+  width: 100%;
+  padding: 0.4em 0.1em;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #546e7a;
+}
+
+.react-multi-email > span[data-placeholder] {
+  font-size: 1rem;
+  color: #546e7a;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  background-color: white;
+  position: absolute;
+  top: 19px;
+  left: 14px;
+}
+
+.react-multi-email-outer {
+  width: 100%;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.react-multi-email:not(.empty) > span[data-placeholder],
+.react-multi-email.focused > span[data-placeholder] {
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  transform: scale(0.75) translate(-26px, -38px);
+}
+
+.react-multi-email.focused > span[data-placeholder] {
+  color: #3f51b5;
+}
+
+.react-multi-email:hover {
+  border-color: black;
+}
+
+#testInfSearch {
+  -webkit-transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  transition: box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+#testInfSearch:hover {
+  border-color: black;
+}
+
+.dialogTableTitle {
+  padding: 16px 0px 0px !important;
+}
+
+.borderlessDialog td {
+  padding: 2px;
+  border-bottom-width: 0px;
+}
+
+.borderedDialog {
+  width: 100%;
+}
+
+#dialogTitle button {
+  color: white;
+}
+
+.borderedDialog tr {
+  width: 100%;
+}
+
+.borderedDialog td {
+  padding: 8px;
+  width: 100%;
+}
+
+.react-multi-email.focused {
+  border-color: #3f51b5;
+  border-width: 2px;
+}
+
+.react-multi-email > div > [data-tag] {
+  vertical-align: baseline;
+  margin: 4px;
+  color: rgba(0, 0, 0, 0.87);
+  height: 32px;
+  text-transform: none;
+  font-weight: 600;
+  border: 0 solid transparent;
+  -webkit-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+  font-size: 0.8rem;
+  float: left;
+  align-items: center;
+  padding: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  white-space: nowrap;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+}
+
+.email {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+
+.emailCancel {
+  color: rgba(38, 50, 56, 0.26);
+  width: 22px !important;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  height: 22px !important;
+  margin: 2px 5px 0 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emailCancel:hover {
+  color: rgba(38, 50, 56, 0.4);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

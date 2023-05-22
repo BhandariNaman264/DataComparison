@@ -1,0 +1,1 @@
+.\ComparePay RunType=SCR ProcessType=QueueTask InputFile=.\Input\InputSCR.json OutputFolder=.\Output

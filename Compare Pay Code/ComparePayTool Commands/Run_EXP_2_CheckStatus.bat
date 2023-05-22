@@ -1,0 +1,1 @@
+.\ComparePay RunType=EXPORT ProcessType=CheckJobStatus InputFile=.\Input\InputExport_Expeditors.json OutputFolder=.\Output LogFile=CompareResultExport.txt

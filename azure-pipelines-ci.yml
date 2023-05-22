@@ -1,0 +1,55 @@
+# This tool based on the Input parameters starts Pay Summary Recalc, Base Rate Recalc, Job Step Recalc, Schedule Cost Recalc, Award Entitlement, and Pay Export Background Job, generates Output Files, Compares them and Analyze Record.
+# Container-DotNet-App application
+
+trigger:
+- master
+- hotfix/*
+
+variables:
+  domainId: ???
+  containerAppProjectPath: ???
+  containerRegistryRepository: ???
+
+name: 1.0.$(Date:yy)$(DayOfYear)$(Rev:.r)
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: DFDevOps\cicd-templates
+    ref: refs/tags/stable-2
+    # http://tdc1tfsapp01:8080/tfs/DefaultCollection/DFDevOps/_git/cicd-templates
+
+jobs:
+- job: Build
+  pool:
+    demands: DotNetFramework
+  workspace:
+    clean: all
+  variables:
+  - template: ci/variables.yml@templates
+
+  steps:
+  - template: ci/set-branch-build-number.yml@templates
+
+  - template: ci/build-and-test.yml@templates
+    parameters:
+      withCoverage: false
+
+  - template: ci/docker-build-push-all-tags.yml@templates
+    parameters:
+      containerRegistryNamespace: $(domainId)
+      apps:
+      - projectPath: $(containerAppProjectPath)
+        containerRegistryRepository: $(containerRegistryRepository)
+
+  - task: PublishBuildArtifacts@1
+    displayName: Publishing Database artifact
+    inputs:
+      PathtoPublish: "$(Build.SourcesDirectory)/SqlMigrations"
+      ArtifactName: "DB"
+      publishLocation: "Container"
+
+  - template: ci/symbols-publish.yml@templates
+
+  - template: ci/sonar-qube-publish.yml@templates

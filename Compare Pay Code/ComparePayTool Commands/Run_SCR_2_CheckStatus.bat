@@ -1,0 +1,1 @@
+.\ComparePay RunType=SCR ProcessType=CheckJobStatus InputFile=.\Input\InputSCR.json OutputFolder=.\Output

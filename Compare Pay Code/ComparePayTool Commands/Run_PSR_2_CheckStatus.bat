@@ -1,0 +1,1 @@
+.\ComparePay RunType=PSR ProcessType=CheckJobStatus InputFile=.\Input\InputPSR.json OutputFolder=.\Output

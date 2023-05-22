@@ -1,0 +1,1 @@
+.\ComparePay RunType=SCR ProcessType=CompareResult InputFile=.\Input\InputSCR.json OutputFolder=.\Output

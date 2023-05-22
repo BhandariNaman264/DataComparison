@@ -1,0 +1,1 @@
+.\ComparePay RunType=JOBSTEPRECALC ProcessType=CompareResult InputFile=.\Input\InputJobStepRecalc.json OutputFolder=.\Output

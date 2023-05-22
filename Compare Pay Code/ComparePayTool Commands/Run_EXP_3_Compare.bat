@@ -1,0 +1,1 @@
+.\ComparePay RunType=EXPORT ProcessType=CompareResult InputFile=.\Input\InputExport.json OutputFolder=.\Output LogFile=CompareResultExport.txt
